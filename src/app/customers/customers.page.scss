@@ -1,0 +1,15 @@
+ion-toolbar{
+    background-color: var(--ion-color-mycolor);
+}
+
+.btn{
+    background-color: var(--ion-color-mycolor-shade);
+    color: white;
+    padding: 20px 30px 20px 30px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.colorName{
+    color: var(--ion-color-mycolor)
+}

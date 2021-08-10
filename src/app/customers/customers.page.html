@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color='myColor'>
+    <ion-title>Customers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="permission">
+    <ion-list-header>
+      Listado de clientes
+    </ion-list-header>
+
+    <ion-item *ngFor="let c of customers">
+      <ion-avatar slot="start">
+        <img src="../../assets/customers-img/{{c.img}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="search"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2 class="colorName">{{c.name}}</h2>
+        <h3>{{c.state}}</h3>
+        <p>{{c.description}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-label *ngIf="!permission"> No tiene permisos para visualizar la información </ion-label>
+</ion-content>
