@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'city/:id',
     loadChildren: () => import('./city/city.module').then( m => m.CityPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({
