@@ -2,6 +2,9 @@
   <ion-toolbar color='myColor'>
     <ion-title>Customers</ion-title>
   </ion-toolbar>
+  <ion-toolbar color="myColor">
+    <ion-searchbar placeholder="Buscar" animated (ionChange)="searchCustomer($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
@@ -10,7 +13,7 @@
       Listado de clientes
     </ion-list-header>
 
-    <ion-item *ngFor="let c of customers">
+    <ion-item *ngFor="let c of searchedCustomer">
       <ion-avatar slot="start">
         <img src="../../assets/customers-img/{{c.img}}">
       </ion-avatar>
